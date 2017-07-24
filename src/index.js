@@ -5,7 +5,7 @@ import {
 	createFilter
 } from 'rollup-pluginutils'
 
-export default function svg(options = {}) {
+export default function quillsvg(options = {}) {
 	const filter = createFilter(options.include, options.exclude)
 
 	return {
