@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-quillsvg",
-  "version": "0.0.2",
+  "version": "0.1.2",
   "description": "Import SVG images from quill",
   "main": "dist/rollup-plugin-quillsvg.cjs.js",
   "jsnext:main": "dist/rollup-plugin-quillsvg.es.js",

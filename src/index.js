@@ -1,4 +1,7 @@
 import {
+	readFileSync
+} from 'fs';
+import {
 	extname
 } from 'path';
 import {
@@ -11,16 +14,14 @@ export default function quillsvg(options = {}) {
 	return {
 		name: 'quillsvg',
 
-		transform(code, id) {
+		load(id) {
 
 			if (!filter(id) || extname(id) !== '.svg') {
 				return null
 			}
 
-			const mime = 'image/svg+xml'
-			const buffer = Buffer.from(code.trim(), 'utf-8')
-			const encoded = buffer.toString('base64')
-			const exported = `export default '<img src="data:${mime};base64,${encoded}">'`
+			var data = readFileSync(id, 'utf-8');
+			const exported = "export default " + "`" + encoded + "`";
 
 			return {
 				code: exported,
