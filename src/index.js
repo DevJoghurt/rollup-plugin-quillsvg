@@ -21,7 +21,7 @@ export default function quillsvg(options = {}) {
 			}
 
 			var data = readFileSync(id, 'utf-8');
-			const exported = "export default " + "`" + encoded + "`";
+			const exported = "export default " + "`" + data + "`";
 
 			return {
 				code: exported,
